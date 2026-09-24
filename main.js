@@ -351,8 +351,8 @@ const QUEEN_SUMMON_COUNT = 10;
 const BEE_LIMIT = 60;
 
 /* 序盤ブースト */
-const EARLY_BOOST_UNTIL = 30;   // ゲーム内秒
-const EARLY_BOOST_MUL = 0.6;    // 出現間隔の倍率
+const EARLY_BOOST_UNTIL = 30;
+const EARLY_BOOST_MUL = 0.5;
 
 function addHitStop(t) { if (t > hitStop) hitStop = t; }
 function addShake(mag, dur) {
@@ -682,7 +682,6 @@ function update(dt) {
 
   spawnTimer -= dt;
   if (spawnTimer <= 0) {
-    /* 序盤ブースト：30秒まで出現間隔を0.6倍 */
     const earlyBoost = (elapsed < EARLY_BOOST_UNTIL) ? EARLY_BOOST_MUL : 1.0;
     spawnTimer = Math.max(0.18, (1.1 - elapsed * 0.012) * stats.diff.spawnMul * earlyBoost);
     spawnEnemy();
@@ -1173,7 +1172,6 @@ function showOverlay(title, msg, btnText) {
 
 function showStartScreen() {
   overlayTitle.innerHTML = 'はしちゃん<br>サバイバー';
-  overlayMsg.textContent = 'タップ / クリックで開始';
   overlayHelp.style.display = 'block';
   startBtn.textContent = 'START';
   topBar.classList.add('hidden');

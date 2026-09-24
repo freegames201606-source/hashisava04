@@ -176,7 +176,6 @@ canvas { display: block; touch-action: none; }
   color: #ffd54f;
   text-shadow: 0 0 12px rgba(255,213,79,0.5);
 }
-#overlay-msg { margin: 0; opacity: 0.85; font-size: 14px; }
 
 #overlay-test-badge {
   margin: 4px 0;
@@ -195,9 +194,6 @@ canvas { display: block; touch-action: none; }
   margin: 4px 0;
   display: flex; flex-direction: column; gap: 6px;
   align-items: center;
-}
-.diff-label {
-  margin: 0; font-size: 13px; opacity: 0.8; letter-spacing: 2px;
 }
 #difficulty { display: flex; gap: 8px; }
 .diff-btn {
@@ -250,28 +246,28 @@ canvas { display: block; touch-action: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   min-height: 0;
 }
 .star-line {
   margin: 0;
-  font-size: 20px;
-  letter-spacing: 2px;
+  font-size: 10px;
+  letter-spacing: 1px;
   line-height: 1.1;
-  height: 22px;
+  height: 12px;
 }
 .star-line:empty { display: none; }
 .red-stars {
   color: #ff1744;
   text-shadow:
-    0 0 6px rgba(255,23,68,0.85),
-    0 0 14px rgba(255,23,68,0.55);
+    0 0 4px rgba(255,23,68,0.85),
+    0 0 8px rgba(255,23,68,0.55);
 }
 .yellow-stars {
   color: #ffd54f;
   text-shadow:
-    0 0 6px rgba(255,213,79,0.85),
-    0 0 14px rgba(255,213,79,0.55);
+    0 0 4px rgba(255,213,79,0.85),
+    0 0 8px rgba(255,213,79,0.55);
 }
 .star-line.hidden { display: none; }
 
